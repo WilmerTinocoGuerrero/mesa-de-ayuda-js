@@ -9,7 +9,7 @@ const IncidentCard = ({ incidencia, onEdit, onDelete }) => {
   const estadoColor = {
     Pendiente: 'bg-gray-100 text-gray-700',
     'En proceso': 'bg-blue-100 text-blue-700',
-    Resuelto: 'bg-emerald-100 text-emerald-700'
+    Resuelta: 'bg-emerald-100 text-emerald-700'
   };
 
   return (
@@ -17,7 +17,7 @@ const IncidentCard = ({ incidencia, onEdit, onDelete }) => {
       <div className="p-6">
         <div className="flex justify-between items-start mb-4">
           <div>
-            <span className="text-xs font-mono text-gray-500">{incidencia.codigo}</span>
+            <span className="text-xs font-mono text-gray-500">{incidencia.id}</span>
             <h3 className="font-semibold text-lg text-gray-900 mt-1 line-clamp-2">
               {incidencia.titulo}
             </h3>

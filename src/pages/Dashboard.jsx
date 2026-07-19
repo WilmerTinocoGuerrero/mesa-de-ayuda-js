@@ -17,7 +17,7 @@ const Dashboard = () => {
   // Datos de ejemplo (puedes reemplazar con llamada a backend)  / OKEY : aqui pongo el consumo de la API REST simulada
   // petición real
   useEffect(() => {
-    fetch('http://localhost:3000/incidencias')
+    fetch('http://localhost:8080/incidencias')
        .then(respuesta => respuesta.json())
        .then(datos => {
           setIncidencias(datos);
@@ -43,7 +43,7 @@ const Dashboard = () => {
     const id = selectedIncident.id;
 
     // ejecutamos la peticion (DELETE) hacia nuestra url
-    fetch(`http://localhost:3000/incidencias/${id}`, {
+    fetch(`http://localhost:8080/incidencias/${id}`, {
       method: 'DELETE',
     })
       .then(respuesta => {
@@ -71,7 +71,7 @@ const Dashboard = () => {
 
   const confirmEdit = (incidenciaActualizada) => {
     // usamos el PUT y enviamos el JSON con los datos nuevos
-    fetch(`http://localhost:3000/incidencias/${incidenciaActualizada.id}`, {
+    fetch(`http://localhost:8080/incidencias/${incidenciaActualizada.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

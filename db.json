@@ -25,13 +25,13 @@
       "estado": "En proceso"
     },
     {
-      "codigo": "INC-2026-004",
-      "titulo": "Caida de Red",
-      "descripcion": "se cayó la red xddd",
+      "codigo": "INC-2026-003",
+      "titulo": "Error en la red",
+      "descripcion": "caida de conexión",
       "area": "TI",
       "prioridad": "Alta",
       "estado": "Resuelta",
-      "id": "tUb_TaCO9zs"
+      "id": "CAK5ylt3kNk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -2,7 +2,7 @@ const DashboardStats = ({ incidencias }) => {
   const total = incidencias.length;
   const pendientes = incidencias.filter(i => i.estado === 'Pendiente').length;
   const enProceso = incidencias.filter(i => i.estado === 'En proceso').length;
-  const resueltas = incidencias.filter(i => i.estado === 'Resuelto').length;
+  const resueltas = incidencias.filter(i => i.estado === 'Resuelta').length;
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

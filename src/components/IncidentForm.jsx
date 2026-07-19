@@ -121,7 +121,7 @@ const IncidentForm = ({ onSubmit, initialData = null, isEditing = false }) => {
               className="w-full px-5 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-indigo-500">
               <option value="Pendiente">Pendiente</option>
               <option value="En proceso">En proceso</option>
-              <option value="Resuelto">Resuelto</option>
+              <option value="Resuelta">Resuelta</option>
             </select>
           </div>
         </div>

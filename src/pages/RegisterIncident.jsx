@@ -4,7 +4,7 @@ const RegisterIncident = () => {
   const handleSubmit = (data) => {
     
     // Aquí se conectará con el backend más adelante / --> conectando la PETICIÓN POST para comunicarse con el servidor
-    fetch('http://localhost:3000/incidencias', {
+    fetch('http://localhost:8080/incidencias', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', // enviamos formato JSON
