@@ -10,14 +10,19 @@ const Dashboard = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedIncident, setSelectedIncident] = useState(null);
 
-  // Datos de ejemplo (puedes reemplazar con llamada a backend)
+  // Datos de ejemplo (puedes reemplazar con llamada a backend)  / OKEY : aqui pongo el consumo de la API REST simulada
+  // petición real
   useEffect(() => {
-    const datosEjemplo = [
-      { id: 1, codigo: "INC-2026-001", titulo: "Error en login del sistema", descripcion: "No permite acceder con credenciales correctas", area: "TI", prioridad: "Alta", estado: "Pendiente" },
-      { id: 2, codigo: "INC-2026-002", titulo: "Impresora sin conexión", descripcion: "No imprime desde ninguna estación", area: "Contabilidad", prioridad: "Media", estado: "En proceso" },
-    ];
-    setIncidencias(datosEjemplo);
-    setLoading(false);
+    fetch('http://localhost:3000/incidencias')
+       .then(respuesta => respuesta.json())
+       .then(datos => {
+          setIncidencias(datos);
+          setLoading(false);
+       })
+       .catch(error => {
+        console.error("Error al cargar las incidencias", error);
+        setLoading(false);
+       });
   }, []);
 
   const handleDelete = (incidencia) => {
