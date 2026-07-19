@@ -22,25 +22,16 @@
       "descripcion": "Caída intermitente del servicio",
       "area": "TI",
       "prioridad": "Crítica",
-      "estado": "Pendiente"
+      "estado": "En proceso"
     },
     {
       "codigo": "INC-2026-004",
       "titulo": "Caida de Red",
-      "descripcion": "se cayó la red xd",
+      "descripcion": "se cayó la red xddd",
       "area": "TI",
       "prioridad": "Alta",
-      "estado": "En proceso",
+      "estado": "Resuelta",
       "id": "tUb_TaCO9zs"
-    },
-    {
-      "codigo": "INC-2026-004",
-      "titulo": "Caida de Red",
-      "descripcion": "se cayó la red xd",
-      "area": "TI",
-      "prioridad": "Alta",
-      "estado": "En proceso",
-      "id": "PACcxiR6iKA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
