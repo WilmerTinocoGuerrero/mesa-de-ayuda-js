@@ -2,13 +2,29 @@ import IncidentForm from '../components/IncidentForm';
 
 const RegisterIncident = () => {
   const handleSubmit = (data) => {
-    // Aquí se conectará con el backend más adelante
-    console.log('Incidencia registrada:', data);
-    alert('¡Incidencia registrada con éxito!');
     
-    // Limpiar formulario (opcional)
-    window.location.reload();
-  };
+    // Aquí se conectará con el backend más adelante / --> conectando la PETICIÓN POST para comunicarse con el servidor
+    fetch('http://localhost:3000/incidencias', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json', // enviamos formato JSON
+      },
+
+      body: JSON.stringify(data)
+    })
+      .then(respuesta => {
+        if (respuesta.ok) {
+          alert('¡Incidencia Registrada con éxito la base de datos!');
+
+          // aqui recargamos la pagina para limpiar el formulario, tal como lo teniamos
+          window.location.reload();
+        }
+      })
+      .catch(error => {
+        console.error('Error al guardar en el backend:', error);
+        alert('Hubo un error al registrar la incidencia.');
+      });
+    };
 
 return (
     <div className="max-w-3xl mx-auto animate-fade-in">
